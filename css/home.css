@@ -1,0 +1,78 @@
+/* index / home page styles */
+
+.discover-section {
+  padding: 32px 40px;
+}
+
+.discover-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 24px;
+}
+
+/* top category cards */
+.category-grid-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.category-card {
+  background: var(--green);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.category-card:hover {
+  background: var(--green-dark);
+}
+
+.category-card svg,
+.category-card img {
+  width: 40px;
+  height: 40px;
+}
+
+/* bottom service preview cards */
+.category-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.service-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* view all link */
+.view-all {
+  text-align: center;
+  display: block;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  color: var(--text);
+}
+
+.view-all:hover {
+  color: var(--green-dark);
+}
+
+

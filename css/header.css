@@ -1,0 +1,93 @@
+/* site header */
+
+.site-header {
+  background: var(--green);
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-header .header-title {
+  text-align: center;
+  flex: 1;
+}
+
+.site-header h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.site-header p {
+  font-size: 1rem;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+/* search bar in header */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border-radius: 30px;
+  padding: 10px 15px;
+  gap: 10px;
+  min-width: 220px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--text);
+  width: 100%;
+}
+
+.search-bar button {
+  color: var(--text-muted);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* header user actions (profile/location icons) */
+.header-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.header-action svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* back link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.back-link:hover {
+  color: var(--text);
+}

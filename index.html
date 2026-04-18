@@ -1,24 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Local Business Discovery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Business Discovery</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
-
 <body>
 
-<header>
-    <h1>Local Business Discovery</h1>
-    <p>Find and support small businesses near you</p>
-</header>
+  <!-- main header -->
+  <header class="site-header">
+    <div class="header-actions">
+      <a href="#" class="header-action">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        Edit user profile
+      </a>
+      <a href="#" class="header-action">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        Edit location
+      </a>
+    </div>
 
-<main>
-    <button id="helloBtn">Click me</button>
-    <p id="message"></p>
-</main>
+    <div class="header-title">
+      <h1>Local Business Discovery</h1>
+      <p>Find and support small businesses</p>
+    </div>
 
-<script src="script.js"></script>
+    <div class="search-bar">
+      <input type="text" placeholder="Search categories...">
+      <button aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="7"/>
+          <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+        </svg>
+      </button>
+    </div>
+  </header>
 
+  <!-- discover section -->
+  <main class="discover-section">
+    <h2>Discover</h2>
+
+    <!-- top category tiles -->
+    <div class="category-grid-top">
+      <a href="pages/listings.html?category=restaurants" class="category-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M3 2v7c0 2.2 1.8 4 4 4h1v9h2V2H8v9H7C5.9 11 5 10.1 5 9V2H3zM16 2c-2.4 0-4 1.6-4 5v6h3v9h2V2h-1z"/>
+        </svg>
+        Restaurants
+      </a>
+      <a href="pages/listings.html?category=shopping" class="category-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        Shopping
+      </a>
+      <a href="pages/listings.html?category=travel" class="category-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+        </svg>
+        Travel
+      </a>
+    </div>
+
+    <!-- bottom preview tiles (placeholders for featured/popular) -->
+    <div class="category-grid-bottom">
+      <div class="service-card">Featured businesses</div>
+      <div class="service-card">Featured businesses</div>
+      <div class="service-card">Featured businesses</div>
+    </div>
+
+    <a href="pages/listings.html" class="view-all">View full categories list</a>
+  </main>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

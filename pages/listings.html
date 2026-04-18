@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listings – Local Business Discovery</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/listings.css">
+</head>
+<body>
+
+  <!-- category header -->
+  <header class="listings-header">
+    <div class="header-title">
+      <svg id="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"></svg>
+      <span id="category-title">Listings</span>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Filter...">
+      <button aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="7"/>
+          <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- toolbar -->
+  <div class="listings-toolbar">
+    <a href="../index.html" class="back-link">← BACK</a>
+    <div class="toolbar-right">
+      <button class="toolbar-btn">Filter by...</button>
+      <button class="toolbar-btn">Sort by...</button>
+    </div>
+  </div>
+
+  <!-- business listings -->
+  <main>
+    <div class="listings-grid" id="listings-grid">
+      <!-- cards injected by listings.js -->
+    </div>
+  </main>
+
+  <script src="../js/listings.js"></script>
+</body>
+</html>

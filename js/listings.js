@@ -160,20 +160,21 @@ function starsHtml(rating) {
 }
 
 // build card
-function createCard(biz) {
-  const card = document.createElement("div");
+function createCard(biz, index) {
+  const card = document.createElement("a");
   card.className = "business-card";
+  card.href = `business.html?category=${categoryKey}&id=${index}`;
   card.innerHTML = `
-    <div class="card-image">No image yet</div>
-    <div class="card-body">
-      <div class="card-name">${biz.name}</div>
-      <div class="card-address">${biz.address}</div>
-      <div class="card-rating">
-        <span class="stars">${starsHtml(biz.rating)}</span> ${biz.rating}
-      </div>
-      <div class="card-review">${biz.review}</div>
-    </div>
-  `;
+        <div class="card-image">No image yet</div>
+        <div class="card-body">
+            <div class="card-name">${biz.name}</div>
+            <div class="card-address">${biz.address}</div>
+            <div class="card-rating">
+                <span class="stars">${starsHtml(biz.rating)}</span> ${biz.rating}
+            </div>
+            <div class="card-review">${biz.review}</div>
+        </div>
+    `;
   return card;
 }
 
@@ -186,7 +187,7 @@ function renderListings(list) {
       '<p style="padding:20px;color:var(--text-muted)">No results found.</p>';
     return;
   }
-  list.forEach((biz) => grid.appendChild(createCard(biz)));
+  list.forEach((biz, i) => grid.appendChild(createCard(biz, i)));
 }
 
 // read category from url

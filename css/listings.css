@@ -1,113 +1,114 @@
 /* listings / category page styles */
 
 .listings-header {
-  background: var(--green);
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    background: var(--green);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .listings-header .header-title {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 1.8rem;
-  font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 .listings-header svg {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
 /* toolbar: back / filter / sort */
 .listings-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
 }
 
 .toolbar-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .toolbar-btn {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  padding: 6px 12px;
-  border-radius: 8px;
-  border: 1px solid #bbb;
-  background: var(--white);
-  cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    background: var(--white);
+    cursor: pointer;
 }
 
 .toolbar-btn:hover {
-  background: var(--card-bg);
+    background: var(--card-bg);
 }
 
 /* business cards grid */
 .listings-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  padding: 0 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 0 24px 32px;
 }
 
 .business-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.15s, box-shadow 0.15s;
+    display: block;
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .business-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 .business-card .card-image {
-  background: var(--card-bg);
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-size: 0.85rem;
+    background: var(--card-bg);
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
 
 .business-card .card-body {
-  padding: 12px 14px;
+    padding: 12px 14px;
 }
 
 .business-card .card-name {
-  font-size: 1rem;
-  font-weight: 700;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .business-card .card-address {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin: 2px 0 8px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 2px 0 8px;
 }
 
 .business-card .card-rating {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
 }
 
 .business-card .card-review {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* not sure why this is warninged but it works */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* not sure why this is warninged but it works */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* star rating display */

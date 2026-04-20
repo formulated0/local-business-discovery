@@ -50,6 +50,4 @@
       localStorage.setItem(key, JSON.stringify(t.listing));
     }
   });
-
-  console.log("Template listings initialized");
 })();

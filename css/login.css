@@ -1,0 +1,155 @@
+/* login / signup page */
+
+.login-page {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg);
+}
+
+.login-box {
+	background: var(--white);
+	border-radius: var(--radius);
+	padding: 40px;
+	width: 100%;
+	max-width: 420px;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h1 {
+	font-size: 1.6rem;
+	font-weight: 800;
+	margin-bottom: 8px;
+}
+
+.login-box .subtitle {
+	font-size: 0.95rem;
+	color: var(--text-muted);
+	margin-bottom: 28px;
+}
+
+/* tab switcher: log in / sign up */
+.auth-tabs {
+	display: flex;
+	gap: 0;
+	margin-bottom: 24px;
+	border-bottom: 2px solid var(--card-bg);
+}
+
+.auth-tab {
+	flex: 1;
+	padding: 10px;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	color: var(--text-muted);
+	border-bottom: 2px solid transparent;
+	margin-bottom: -2px;
+	background: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.auth-tab.active {
+	color: var(--text);
+	border-bottom-color: var(--green);
+}
+
+/* form fields */
+.auth-form {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.auth-form label {
+	font-size: 0.9rem;
+	font-weight: 600;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.auth-form input {
+	width: 100%;
+	padding: 10px 14px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-family: inherit;
+	outline: none;
+}
+
+.auth-form input:focus {
+	border-color: var(--green);
+}
+
+/* account type toggle (signup only) */
+.type-toggle {
+	display: flex;
+	gap: 10px;
+}
+
+.type-btn {
+	flex: 1;
+	padding: 10px;
+	border-radius: 8px;
+	border: 2px solid var(--card-bg);
+	background: var(--card-bg);
+	font-size: 0.95rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: border-color 0.15s, background 0.15s;
+}
+
+.type-btn.selected {
+	border-color: var(--green);
+	background: var(--white);
+}
+
+.type-hint {
+	font-size: 0.8rem;
+	color: var(--text-muted);
+	margin-top: -6px;
+}
+
+/* submit button */
+.auth-submit {
+	width: 100%;
+	padding: 12px;
+	background: var(--green);
+	color: var(--text);
+	font-size: 1rem;
+	font-weight: 700;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	margin-top: 6px;
+	transition: background 0.15s;
+}
+
+.auth-submit:hover {
+	background: var(--green-dark);
+}
+
+.auth-error {
+	font-size: 0.9rem;
+	color: #c0392b;
+	text-align: center;
+	min-height: 20px;
+}
+
+.login-back {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 0.9rem;
+	color: var(--text-muted);
+	text-decoration: underline;
+}
+
+.login-back:hover {
+	color: var(--text);
+}

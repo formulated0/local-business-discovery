@@ -1,176 +1,235 @@
 /* business detail page */
 
 .business-header {
-    background: var(--green);
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	background: var(--green);
+	padding: 20px 40px;
+	display: flex;
+	align-items: center;
 }
 
 .business-header .header-title {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.business-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: var(--card-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    text-align: center;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-.business-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+	font-size: 2rem;
+	font-weight: 700;
 }
 
 /* three-column layout */
 .business-body {
-    display: grid;
-    grid-template-columns: 2fr 1.5fr 1.5fr;
-    gap: 24px;
-    padding: 24px 40px;
-    align-items: start;
+	display: grid;
+	grid-template-columns: 2fr 1.5fr 1.5fr;
+	gap: 24px;
+	padding: 24px 40px;
+	align-items: start;
 }
 
-/* left col: description + map */
+/* left col */
 .business-left {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 
 .business-description {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 20px;
-    font-size: 1rem;
-    color: var(--text-muted);
-    min-height: 150px;
+	background: var(--card-bg);
+	border-radius: var(--radius);
+	padding: 20px;
+	font-size: 1rem;
+	color: var(--text-muted);
+	min-height: 150px;
+	line-height: 1.6;
 }
 
-.business-map {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    height: 240px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+.business-address-box {
+	background: var(--card-bg);
+	border-radius: var(--radius);
+	padding: 16px 20px;
 }
 
-/* middle col: photos + rating */
+.address-label {
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--text-muted);
+	display: block;
+	margin-bottom: 6px;
+}
+
+.business-address-box p {
+	font-size: 1rem;
+	color: var(--text);
+}
+
+/* middle col */
 .business-middle {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 
-.photo-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 180px 100px;
-    gap: 6px;
-    border-radius: var(--radius);
-    overflow: hidden;
+.business-image {
+	background: var(--card-bg);
+	border-radius: var(--radius);
+	height: 280px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-muted);
+	font-size: 0.9rem;
 }
 
-.photo-grid .photo-main {
-    grid-column: 1 / -1;
-    background: var(--card-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-.photo-grid .photo-thumb {
-    background: var(--card-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-size: 0.8rem;
-}
-
-.photo-more {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    text-align: center;
-    text-decoration: underline;
-    cursor: pointer;
+.business-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .business-stars {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    font-size: 1.8rem;
-    color: #e6a817;
-    padding: 8px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	font-size: 1.8rem;
+	color: #e6a817;
+	padding: 8px 0;
 }
 
 .business-stars span {
-    font-size: 1rem;
-    color: var(--text-muted);
+	font-size: 1rem;
+	color: var(--text-muted);
 }
 
 /* right col: reviews */
 .business-reviews h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-decoration: underline;
-    margin-bottom: 16px;
-    text-align: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-decoration: underline;
+	margin-bottom: 14px;
+	text-align: center;
 }
 
+.review-btn {
+	width: 100%;
+	margin-bottom: 14px;
+}
+
+/* review submission form */
+.review-form {
+	background: var(--card-bg);
+	border-radius: var(--radius);
+	padding: 16px;
+	margin-bottom: 14px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.star-picker {
+	display: flex;
+	gap: 4px;
+	font-size: 1.6rem;
+	color: #ccc;
+	cursor: pointer;
+}
+
+.star-pick.lit {
+	color: #e6a817;
+}
+
+.review-form textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	font-family: inherit;
+	resize: vertical;
+	min-height: 80px;
+	outline: none;
+}
+
+.review-form textarea:focus {
+	border-color: var(--green);
+}
+
+.review-error {
+	font-size: 0.85rem;
+	color: #c0392b;
+	min-height: 16px;
+}
+
+/* individual review cards */
 .review-card {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 14px;
-    margin-bottom: 12px;
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
+	background: var(--card-bg);
+	border-radius: var(--radius);
+	padding: 14px;
+	margin-bottom: 10px;
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
 }
 
 .review-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #b0b0b0;
-    flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #b0b0b0;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.review-avatar svg {
+	width: 24px;
+	height: 24px;
+	color: var(--white);
 }
 
 .review-content {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
 }
 
-.review-text-line {
-    height: 10px;
-    background: #b0b0b0;
-    border-radius: 4px;
+.review-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-.review-text-line:nth-child(1) { width: 100%; }
-.review-text-line:nth-child(2) { width: 85%; }
-.review-text-line:nth-child(3) { width: 70%; }
+.review-author {
+	font-weight: 700;
+	font-size: 0.95rem;
+}
+
+.review-stars {
+	color: #e6a817;
+	font-size: 0.95rem;
+}
+
+.review-text {
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: var(--text);
+}
+
+.review-date {
+	font-size: 0.8rem;
+	color: var(--text-muted);
+}
+
+/* shared btn-row used on this page */
+.btn-row {
+	display: flex;
+	gap: 10px;
+}
+
+.btn-secondary {
+	background: var(--card-bg);
+	color: var(--text);
+	border: 1px solid #bbb;
+}
+
+.btn-secondary:hover {
+	background: #bbb;
+}

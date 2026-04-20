@@ -35,3 +35,23 @@ button {
     background: none;
     font: inherit;
 }
+
+/* shared button styles */
+.btn {
+	padding: 10px 20px;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	border: none;
+	transition: background 0.15s;
+}
+
+.btn-primary {
+	background: var(--green);
+	color: var(--text);
+}
+
+.btn-primary:hover {
+	background: var(--green-dark);
+}

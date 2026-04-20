@@ -13,19 +13,12 @@
         <!-- main header -->
         <header class="site-header">
             <div class="header-actions">
-                <a href="#" class="header-action">
+                <a id="header-auth-link" href="pages/login.html" class="header-action">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="8" r="4"/>
                         <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
                     </svg>
-                    Edit user profile
-                </a>
-                <a href="#" class="header-action">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/>
-                        <circle cx="12" cy="9" r="2.5"/>
-                    </svg>
-                    Edit location
+                    Sign in
                 </a>
                 <a href="pages/about.html" class="header-action">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -37,7 +30,7 @@
                 </a>
             </div>
 
-            <div class="header-title">
+            <div class="header-title"> <!-- this header is off center but who cares anymore -->
                 <h1>Local Business Discovery</h1>
                 <p>Find and support small businesses</p>
             </div>
@@ -101,6 +94,8 @@
             </div>
         </main>
 
+        <script src="js/init-templates.js"></script> <!-- just templates -->
+        <script src="js/auth.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

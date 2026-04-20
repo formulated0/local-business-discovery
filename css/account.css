@@ -1,0 +1,192 @@
+/* account page */
+
+.account-header {
+	background: var(--green);
+	padding: 20px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.account-header .header-title {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.account-header svg {
+	width: 40px;
+	height: 40px;
+}
+
+.account-body {
+	padding: 30px 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	max-width: 700px;
+}
+
+/* profile card */
+.profile-card {
+	background: var(--white);
+	border-radius: var(--radius);
+	padding: 24px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.profile-avatar {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background: var(--card-bg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.profile-avatar svg {
+	width: 40px;
+	height: 40px;
+	color: var(--text-muted);
+}
+
+.profile-info h2 {
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.profile-info .profile-type {
+	font-size: 0.9rem;
+	color: var(--text-muted);
+	margin-top: 2px;
+}
+
+.profile-info .profile-email {
+	font-size: 0.9rem;
+	color: var(--text-muted);
+}
+
+/* section card */
+.section-card {
+	background: var(--white);
+	border-radius: var(--radius);
+	padding: 24px;
+}
+
+.section-card h3 {
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin-bottom: 16px;
+}
+
+/* listing editor (business accounts only) */
+.listing-form {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.listing-form label {
+	font-size: 0.9rem;
+	font-weight: 600;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.listing-form input,
+.listing-form textarea,
+.listing-form select {
+	width: 100%;
+	padding: 10px 14px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-family: inherit;
+	outline: none;
+	background: var(--white);
+}
+
+.listing-form input:focus,
+.listing-form textarea:focus,
+.listing-form select:focus {
+	border-color: var(--green);
+}
+
+.listing-form textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+.listing-status {
+	font-size: 0.9rem;
+	padding: 6px 12px;
+	border-radius: 6px;
+	display: inline-block;
+}
+
+.listing-status.published {
+	background: #d4edda;
+	color: #276232;
+}
+
+.listing-status.draft {
+	background: #fff3cd;
+	color: #856404;
+}
+
+/* action buttons */
+.btn-row {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.btn {
+	padding: 10px 20px;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	border: none;
+	transition: background 0.15s;
+}
+
+.btn-primary {
+	background: var(--green);
+	color: var(--text);
+}
+
+.btn-primary:hover {
+	background: var(--green-dark);
+}
+
+.btn-secondary {
+	background: var(--card-bg);
+	color: var(--text);
+}
+
+.btn-secondary:hover {
+	background: #bbb;
+}
+
+.btn-danger {
+	background: none;
+	color: #c0392b;
+	border: 1px solid #c0392b;
+}
+
+.btn-danger:hover {
+	background: #fdecea;
+}
+
+.save-feedback {
+	font-size: 0.9rem;
+	color: #276232;
+	min-height: 20px;
+}

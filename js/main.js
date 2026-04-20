@@ -2,6 +2,8 @@
 const searchInput = document.querySelector(".search-bar input");
 const categoryCards = document.querySelectorAll(".category-card");
 
+updateHeaderAuthLink();
+
 searchInput.addEventListener("input", (e) => {
   const query = e.target.value.toLowerCase();
   categoryCards.forEach((card) => {

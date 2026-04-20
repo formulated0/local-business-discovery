@@ -1,88 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Business – Local Business Discovery</title>
-        <link rel="stylesheet" href="../css/base.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/business.css">
-    </head>
-    <body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Business – Local Business Discovery</title>
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" href="../css/header.css">
+		<link rel="stylesheet" href="../css/business.css">
+	</head>
+	<body>
 
-        <!-- business header -->
-        <header class="business-header">
-            <div class="header-title">
-                <div class="business-logo" id="business-logo">Logo</div>
-                <span id="business-name">Business Name</span>
-            </div>
-        </header>
+		<!-- business header -->
+		<header class="business-header">
+			<div class="header-title">
+				<span id="business-name">Business Name</span>
+			</div>
+		</header>
 
-        <!-- toolbar -->
-        <div class="listings-toolbar">
-            <a class="back-link" id="back-link" href="../index.html">← BACK</a>
-        </div>
+		<!-- toolbar -->
+		<div class="listings-toolbar">
+			<a class="back-link" id="back-link" href="../index.html">← BACK</a>
+		</div>
 
-        <!-- main content -->
-        <main class="business-body">
+		<!-- main content -->
+		<main class="business-body">
 
-            <!-- left: description + map -->
-            <div class="business-left">
-                <div class="business-description" id="business-description">
-                    Business description...
-                </div>
-                <div class="business-map">
-                    Map placeholder
-                </div>
-            </div>
+			<!-- left: description + address -->
+			<div class="business-left">
+				<div class="business-description" id="business-description">
+					Business description...
+				</div>
+				<div class="business-address-box">
+					<span class="address-label">📍 Address</span>
+					<p id="business-address">–</p>
+				</div>
+			</div>
 
-            <!-- middle: photos + star rating -->
-            <div class="business-middle">
-                <div class="photo-grid">
-                    <div class="photo-main">Photo</div>
-                    <div class="photo-thumb">Photo</div>
-                    <div class="photo-thumb">Photo</div>
-                </div>
-                <div class="photo-more">More pictures</div>
-                <div class="business-stars" id="business-stars">
-                    ☆☆☆☆☆ <span>No ratings yet</span>
-                </div>
-            </div>
+			<!-- middle: image + star rating -->
+			<div class="business-middle">
+				<div class="business-image" id="business-image">
+					<span>No image provided</span>
+				</div>
+				<div class="business-stars" id="business-stars">
+					☆☆☆☆☆ <span>No ratings yet</span>
+				</div>
+			</div>
 
-            <!-- right: reviews -->
-            <div class="business-reviews">
-                <h2>Reviews</h2>
-                <div id="reviews-list">
-                    <!-- placeholder review cards -->
-                    <div class="review-card">
-                        <div class="review-avatar"></div>
-                        <div class="review-content">
-                            <div class="review-text-line"></div>
-                            <div class="review-text-line"></div>
-                            <div class="review-text-line"></div>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-avatar"></div>
-                        <div class="review-content">
-                            <div class="review-text-line"></div>
-                            <div class="review-text-line"></div>
-                            <div class="review-text-line"></div>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-avatar"></div>
-                        <div class="review-content">
-                            <div class="review-text-line"></div>
-                            <div class="review-text-line"></div>
-                            <div class="review-text-line"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<!-- right: reviews -->
+			<div class="business-reviews">
+				<h2>Reviews</h2>
 
-        </main>
+				<button class="btn btn-primary review-btn" id="write-review-btn" onclick="startReview()">Write a review</button>
 
-        <script src="../js/business.js"></script>
-    </body>
+				<!-- review form (hidden until write-review clicked) -->
+				<div class="review-form" id="review-form" style="display:none">
+					<div class="star-picker">
+						<span class="star-pick" data-value="1">★</span>
+						<span class="star-pick" data-value="2">★</span>
+						<span class="star-pick" data-value="3">★</span>
+						<span class="star-pick" data-value="4">★</span>
+						<span class="star-pick" data-value="5">★</span>
+					</div>
+					<textarea id="review-text" placeholder="Share your experience..."></textarea>
+					<p class="review-error" id="review-error"></p>
+					<div class="btn-row">
+						<button class="btn btn-primary" onclick="submitReview()">Submit</button>
+						<button class="btn btn-secondary" onclick="cancelReview()">Cancel</button>
+					</div>
+				</div>
+
+				<div id="reviews-list">
+					<!-- rendered by business.js -->
+				</div>
+			</div>
+
+		</main>
+
+		<script src="../js/auth.js"></script>
+		<script src="../js/data.js"></script>
+		<script src="../js/business.js"></script>
+	</body>
 </html>

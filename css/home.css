@@ -115,19 +115,6 @@
     margin: auto 0;
 }
 
-/* view all link */
-.view-all {
-    text-align: center;
-    display: block;
-    font-size: 0.95rem;
-    text-decoration: underline;
-    color: var(--text);
-}
-
-.view-all:hover {
-    color: var(--green-dark);
-}
-
 /* featured sections */
 .featured {
 	margin-top: 32px;

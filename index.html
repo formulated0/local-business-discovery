@@ -28,6 +28,22 @@
                     </svg>
                     About us
                 </a>
+				<a href="pages/blog.html" class="header-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="12"/>
+                        <line x1="12" y1="16" x2="12.01" y2="16"/> <!-- change the icon once implemented -->
+                    </svg>
+                    Blogs (placeholder)
+                </a>
+				<a href="pages/feedback-form.html" class="header-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="12"/>
+                        <line x1="12" y1="16" x2="12.01" y2="16"/> <!-- change the icon once implemented -->
+                    </svg>
+                    Feedback (placeholder)
+                </a>
             </div>
 
             <div class="header-title"> <!-- this header is off center but who cares anymore -->
@@ -73,16 +89,23 @@
                 </a>
             </div>
 
-            <!-- bottom preview tiles (placeholders for featured/popular) -->
+            <!-- top rated per category -->
             <div class="category-grid-bottom">
-                <div class="service-card">Featured businesses</div>
-                <div class="service-card">Featured businesses</div>
-                <div class="service-card">Featured businesses</div>
+                <div class="service-card">
+                    <h3 class="service-card-title">Top Restaurants</h3>
+                    <div class="service-card-list" id="top-restaurants"></div>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-card-title">Top Shopping</h3>
+                    <div class="service-card-list" id="top-shopping"></div>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-card-title">Top Travel</h3>
+                    <div class="service-card-list" id="top-travel"></div>
+                </div>
             </div>
 
-            <a href="pages/listings.html" class="view-all">View full categories list</a>
-
-            <div class="featured">
+			<div class="featured">
                 <div class="up-and-coming"> <!-- recently added/low review count -->
                     <h2>Up and coming</h2>
                     <div class="up-and-coming-listings"></div>
@@ -94,8 +117,9 @@
             </div>
         </main>
 
-        <script src="js/init-templates.js"></script> <!-- just templates -->
+        <script src="js/init-templates.js"></script>
         <script src="js/auth.js"></script>
+        <script src="js/data.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

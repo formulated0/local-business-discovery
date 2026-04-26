@@ -54,12 +54,65 @@
 .service-card {
     background: var(--card-bg);
     border-radius: var(--radius);
-    height: 200px;
+    height: 180px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.service-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    flex-shrink: 0;
+}
+
+.service-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow: hidden;
+}
+
+/* mini listing row inside service card */
+.mini-card {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    background: var(--white);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.15s;
+}
+
+.mini-card:hover {
+    background: #ebebeb;
+}
+
+.mini-card-name {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 65%;
+}
+
+.mini-card-rating {
+    color: #e6a817;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.service-card-empty {
+    font-size: 0.85rem;
     color: var(--text-muted);
-    font-size: 0.95rem;
+    margin: auto 0;
 }
 
 /* view all link */
@@ -74,5 +127,3 @@
 .view-all:hover {
     color: var(--green-dark);
 }
-
-

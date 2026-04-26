@@ -1,9 +1,39 @@
+// this is actuall a pretty shitty implementation because it updates once and then caches itself so i cant even add more templates in the live server
+
 (function initTemplateListings() {
   const templates = [
     {
       email: "template-restaurant@test.com",
       listing: {
-        name: "TEMPLATE",
+        name: "TEMPLATE 1",
+        address: "TEMPLATE ADDR",
+        category: "restaurants",
+        description:
+          "This is a template restaurant for testing the review system.",
+        published: true,
+        ownerEmail: "template-restaurant@test.com",
+        ownerName: "Template",
+        image: null,
+      },
+    },
+	{
+      email: "template-restaurant@test.com",
+      listing: {
+        name: "TEMPLATE 2",
+        address: "TEMPLATE ADDR",
+        category: "restaurants",
+        description:
+          "This is a template restaurant for testing the review system.",
+        published: true,
+        ownerEmail: "template-restaurant@test.com",
+        ownerName: "Template",
+        image: null,
+      },
+    },
+	{
+      email: "template-restaurant@test.com",
+      listing: {
+        name: "TEMPLATE 3",
         address: "TEMPLATE ADDR",
         category: "restaurants",
         description:
@@ -17,7 +47,35 @@
     {
       email: "template-shopping@test.com",
       listing: {
-        name: "TEMPLATE",
+        name: "TEMPLATE 1",
+        address: "TEMPLATE ADDR",
+        category: "shopping",
+        description:
+          "This is a template shopping business for testing the review system.",
+        published: true,
+        ownerEmail: "template-shopping@test.com",
+        ownerName: "Template",
+        image: null,
+      },
+    },
+	{
+      email: "template-shopping@test.com",
+      listing: {
+        name: "TEMPLATE 2",
+        address: "TEMPLATE ADDR",
+        category: "shopping",
+        description:
+          "This is a template shopping business for testing the review system.",
+        published: true,
+        ownerEmail: "template-shopping@test.com",
+        ownerName: "Template",
+        image: null,
+      },
+    },
+	{
+      email: "template-shopping@test.com",
+      listing: {
+        name: "TEMPLATE 3",
         address: "TEMPLATE ADDR",
         category: "shopping",
         description:
@@ -31,7 +89,35 @@
     {
       email: "template-travel@test.com",
       listing: {
-        name: "TEMPLATE",
+        name: "TEMPLATE 1",
+        address: "TEMPLATE ADDR",
+        category: "travel",
+        description:
+          "This is a template travel business for testing the review system.",
+        published: true,
+        ownerEmail: "template-travel@test.com",
+        ownerName: "Template",
+        image: null,
+      },
+    },
+	    {
+      email: "template-travel@test.com",
+      listing: {
+        name: "TEMPLATE 2",
+        address: "TEMPLATE ADDR",
+        category: "travel",
+        description:
+          "This is a template travel business for testing the review system.",
+        published: true,
+        ownerEmail: "template-travel@test.com",
+        ownerName: "Template",
+        image: null,
+      },
+    },
+	    {
+      email: "template-travel@test.com",
+      listing: {
+        name: "TEMPLATE 3",
         address: "TEMPLATE ADDR",
         category: "travel",
         description:

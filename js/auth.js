@@ -28,7 +28,7 @@ function requireAuth(role = null) {
   const user = getUser();
   if (!user) {
     const next = encodeURIComponent(window.location.href);
-    window.location.href = `/pages/login.html?next=${next}`;
+    window.location.href = `${BASE_PATH}/pages/login.html?next=${next}`;
     return false;
   }
   if (role && user.type !== role) {

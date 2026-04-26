@@ -16,6 +16,21 @@ function getListings(category) {
 	return listings;
 }
 
+// returns all published listings across every category
+function getAllListings() {
+	const listings = [];
+	for (let i = 0; i < localStorage.length; i++) {
+		const key = localStorage.key(i);
+		if (!key.startsWith(LISTING_PREFIX)) continue;
+		const listing = JSON.parse(localStorage.getItem(key));
+		if (listing.published) {
+			listing.ownerEmail = key.replace(LISTING_PREFIX, '');
+			listings.push(listing);
+		}
+	}
+	return listings;
+}
+
 // returns a single listing by owner email
 function getListing(ownerEmail) {
 	const raw = localStorage.getItem(LISTING_PREFIX + ownerEmail);

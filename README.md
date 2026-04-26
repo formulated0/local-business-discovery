@@ -1,6 +1,10 @@
 # local-business-discovery
 
-this codebase is extremely messy and all over the place and hard to maintain - webdev is not my passion nor is it fun; i hate it. so many comments required otherwise i would have no idea what im looking at because js is a STUPID language for STUPID people
+> this codebase is extremely messy and all over the place and hard to maintain - webdev is not my passion nor is it fun; i hate it. so many comments required otherwise i would have no idea what im looking at because js is a STUPID language for STUPID people
+
+there are INTENTIONALLY no businesses on this platform (except for the templates) - the community is the one that posts, as this builds trust. we cannot post some random business without their consent, therefore we are leaving that decision of whether they would like to exist on this platform completely up to the discretion of the business owner.
+
+also unfortunately business listings/reviews made by users will not persist across other devices - i cannot afford a server so everything is stored in localstorage.
 
 ## ai usage
 

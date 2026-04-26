@@ -127,3 +127,29 @@
 .view-all:hover {
     color: var(--green-dark);
 }
+
+/* featured sections */
+.featured {
+	margin-top: 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+.featured h2 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	text-decoration: underline;
+	margin-bottom: 14px;
+}
+
+.featured-row {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 16px;
+}
+
+.featured-empty {
+	color: var(--text-muted);
+	font-size: 0.95rem;
+}

@@ -3,15 +3,15 @@
 .site-header {
     background: var(--green);
     padding: 30px 40px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
     gap: 20px;
 }
 
 .site-header .header-title {
     text-align: center;
-    flex: 1;
+    justify-self: center;
 }
 
 .site-header h1 {
@@ -61,12 +61,23 @@
 }
 
 .header-action {
+    width: 80px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 4px;
-    font-size: 1rem;
+    font-size: 0.85rem;
     color: var(--text);
+    border: 2px solid var(--text);
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.header-action:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
 }
 
 .header-action svg {

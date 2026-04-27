@@ -22,6 +22,12 @@ body {
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 a {
@@ -54,4 +60,14 @@ button {
 
 .btn-primary:hover {
 	background: var(--green-dark);
+}
+
+footer {
+	background: var(--green);
+	padding: 20px 40px;
+	text-align: center;
+	margin-top: 40px;
+	font-size: 0.9rem;
+	color: var(--text);
+	border-top: 2px solid var(--green-dark);
 }

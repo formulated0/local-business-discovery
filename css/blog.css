@@ -1,0 +1,84 @@
+.blog-header {
+	background: var(--green);
+	padding: 20px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.blog-header .header-title {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.blog-header svg {
+	width: 40px;
+	height: 40px;
+}
+
+.blog-body {
+	padding: 30px 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	max-width: 75%;
+	margin: 0 auto; /* need this for centering otherwise its stuck to the left */
+	min-width: 75%;
+}
+
+/* individual blog post card */
+.blog-card {
+	background: var(--white);
+	border-radius: var(--radius);
+	overflow: hidden;
+}
+
+.blog-card-image {
+	background: var(--card-bg);
+	height: 260px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-muted);
+	font-size: 0.9rem;
+	overflow: hidden;
+}
+
+.blog-card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.blog-card-body {
+	padding: 24px;
+}
+
+.blog-card-meta {
+	font-size: 0.85rem;
+	color: var(--text-muted);
+	margin-bottom: 10px;
+}
+
+.blog-card-title {
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin-bottom: 12px;
+}
+
+.blog-card-content {
+	font-size: 1rem;
+	line-height: 1.7;
+	color: var(--text);
+}
+
+.blog-card-content p {
+	margin-bottom: 14px;
+}
+
+.blog-card-content p:last-child {
+	margin-bottom: 0;
+}

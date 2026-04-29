@@ -116,3 +116,77 @@
   color: #e6a817;
   letter-spacing: 2px;
 }
+
+/* filter/sort dropdowns */
+.toolbar-dropdown {
+	position: relative;
+}
+ 
+.dropdown-panel {
+	display: none;
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0;
+	background: var(--white);
+	border-radius: var(--radius);
+	box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+	padding: 14px;
+	min-width: 180px;
+	flex-direction: column;
+	gap: 6px;
+	z-index: 100; /* otherwise its behind the hover effect on cards */
+}
+ 
+.dropdown-panel.open {
+	display: flex;
+}
+ 
+.dropdown-label {
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 4px;
+}
+ 
+/* rating filter pills */
+.rating-options {
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+ 
+.rating-option {
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	background: var(--white);
+	font-size: 0.85rem;
+	cursor: pointer;
+}
+ 
+.rating-option.active {
+	background: var(--green);
+	border-color: var(--green);
+	font-weight: 600;
+}
+ 
+/* sort options list */
+.sort-option {
+	width: 100%;
+	text-align: left;
+	padding: 8px 10px;
+	font-size: 1rem;
+	cursor: pointer;
+	background: none;
+	border: none;
+}
+ 
+.sort-option:hover {
+	background: var(--card-bg);
+}
+ 
+.sort-option.active {
+	font-weight: 700;
+	background: var(--card-bg);
+}

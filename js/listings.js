@@ -64,11 +64,91 @@ document.getElementById('category-icon').innerHTML = meta.icon;
 // live search
 let allListings = getListings(categoryKey);
 
+// active filter + sort state
+let searchQuery = '';
+let minRating = 0;
+let sortMode = 'default';
+
+function applyAndRender() {
+	let list = allListings.filter(l => {
+		const matchesSearch = l.name.toLowerCase().includes(searchQuery) ||
+			l.address.toLowerCase().includes(searchQuery);
+		const rating = avgRating(getReviews(l.ownerEmail));
+		const matchesRating = minRating === 0 || (rating !== null && rating >= minRating);
+		return matchesSearch && matchesRating;
+	});
+ 
+	// didnt know this sort of list comprehension existed in js
+	list = [...list].sort((a, b) => {
+		const ra = avgRating(getReviews(a.ownerEmail)) ?? 0;
+		const rb = avgRating(getReviews(b.ownerEmail)) ?? 0;
+		const ca = getReviews(a.ownerEmail).length;
+		const cb = getReviews(b.ownerEmail).length;
+		switch (sortMode) {
+			case 'az': return a.name.localeCompare(b.name);
+			case 'za': return b.name.localeCompare(a.name);
+			case 'top': return rb - ra;
+			case 'lowest': return ra - rb;
+			case 'mostreviews': return cb - ca;
+			default: return 0;
+		}
+	});
+ 
+	renderListings(list);
+}
+
+// search bar
 document.querySelector('.search-bar input').addEventListener('input', (e) => {
-	const q = e.target.value.toLowerCase();
-	renderListings(allListings.filter(l =>
-		l.name.toLowerCase().includes(q) || l.address.toLowerCase().includes(q)
-	));
+	searchQuery = e.target.value.toLowerCase();
+	applyAndRender();
 });
 
-renderListings(allListings);
+// filter panel toggle
+const filterBtn = document.getElementById('filter-btn');
+const filterPanel = document.getElementById('filter-panel');
+const sortBtn = document.getElementById('sort-btn');
+const sortPanel = document.getElementById('sort-panel');
+ 
+filterBtn.addEventListener('click', (e) => {
+	e.stopPropagation();
+	filterPanel.classList.toggle('open');
+	sortPanel.classList.remove('open');
+});
+ 
+sortBtn.addEventListener('click', (e) => {
+	e.stopPropagation();
+	sortPanel.classList.toggle('open');
+	filterPanel.classList.remove('open');
+});
+ 
+// close panels on outside click
+document.addEventListener('click', () => {
+	filterPanel.classList.remove('open');
+	sortPanel.classList.remove('open');
+});
+ 
+filterPanel.addEventListener('click', e => e.stopPropagation());
+sortPanel.addEventListener('click', e => e.stopPropagation());
+ 
+// min rating filter
+document.querySelectorAll('.rating-option').forEach(btn => {
+	btn.addEventListener('click', () => {
+		document.querySelectorAll('.rating-option').forEach(b => b.classList.remove('active'));
+		btn.classList.add('active');
+		minRating = parseFloat(btn.dataset.min);
+		applyAndRender();
+	});
+});
+ 
+// sort options
+document.querySelectorAll('.sort-option').forEach(btn => {
+	btn.addEventListener('click', () => {
+		document.querySelectorAll('.sort-option').forEach(b => b.classList.remove('active'));
+		btn.classList.add('active');
+		sortMode = btn.dataset.sort;
+		sortBtn.textContent = `Sort: ${btn.textContent}`;
+		applyAndRender();
+	});
+});
+ 
+applyAndRender();

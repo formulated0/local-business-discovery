@@ -4,6 +4,8 @@
 
 there are INTENTIONALLY no businesses on this platform (except for the templates) - the community is the one that posts, as this builds trust. we cannot post some random business without their consent, therefore we are leaving that decision of whether they would like to exist on this platform completely up to the discretion of the business owner.
 
+templates are there to demo the system and to show everything works as intended.
+
 also unfortunately business listings/reviews made by users will not persist across other devices - i cannot afford a server so everything is stored in localstorage.
 
 ## ai usage

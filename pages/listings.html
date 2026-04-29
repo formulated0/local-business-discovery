@@ -31,8 +31,33 @@
         <div class="listings-toolbar">
             <a href="../index.html" class="back-link">← BACK</a>
             <div class="toolbar-right">
-                <button class="toolbar-btn">Filter by...</button>
-                <button class="toolbar-btn">Sort by...</button>
+
+				<!-- filter button -->
+				<div class="toolbar-dropdown">
+					<button class="toolbar-btn" id="filter-btn">Filter by...</button>
+					<div class="dropdown-panel" id="filter-panel">
+						<p class="dropdown-label">Minimum rating</p>
+						<div class="rating-options">
+							<button class="rating-option active" data-min="0">Any</button>
+							<button class="rating-option" data-min="3">3★+</button>
+							<button class="rating-option" data-min="4">4★+</button>
+							<button class="rating-option" data-min="4.5">4.5★+</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- sort button -->
+				<div class="toolbar-dropdown">
+					<button class="toolbar-btn" id="sort-btn">Sort by...</button>
+					<div class="dropdown-panel" id="sort-panel">
+						<button class="sort-option active" data-sort="default">Default</button>
+						<button class="sort-option" data-sort="top">Highest rated</button>
+						<button class="sort-option" data-sort="lowest">Lowest rated</button>
+						<button class="sort-option" data-sort="mostreviews">Most reviewed</button>
+						<button class="sort-option" data-sort="az">A - Z</button>
+						<button class="sort-option" data-sort="za">Z - A</button>
+					</div>
+				</div>
             </div>
         </div>
 

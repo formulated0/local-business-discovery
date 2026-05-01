@@ -1,0 +1,61 @@
+.feedback-header {
+	background: var(--green);
+	padding: 20px 40px;
+	display: flex;
+	align-items: center;
+}
+
+.feedback-header .header-title {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.feedback-header svg {
+	width: 40px;
+	height: 40px;
+}
+
+.feedback-body {
+	padding: 30px 40px;
+	max-width: 75%;
+	margin: 0 auto; /* need this for centering otherwise its stuck to the left */
+	min-width: 75%;
+}
+
+.feedback-card {
+	background: var(--white);
+	border-radius: var(--radius);
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.feedback-card h2 {
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.feedback-desc {
+	font-size: 1rem;
+	color: var(--text-muted);
+	line-height: 1.6;
+}
+
+.form-embed {
+	border-radius: var(--radius);
+	overflow: hidden;
+	background: var(--card-bg);
+}
+
+.form-embed iframe {
+	display: block;
+}
+
+.feedback-note {
+	font-size: 0.85rem;
+	color: var(--text-muted);
+}

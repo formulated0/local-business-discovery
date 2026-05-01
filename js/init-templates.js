@@ -134,4 +134,171 @@
     const key = "lbd_listing_" + t.email;
     localStorage.setItem(key, JSON.stringify(t.listing));
   });
+
+  // template reviews with varied ratings so that it works in the filtering/sorting
+  const reviews = [
+    // restaurants
+    {
+      email: "template-restaurant1@test.com",
+      templateReviews: [
+        {
+          rating: 5,
+          authorName: "RESTAURANT REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+        {
+          rating: 4,
+          authorName: "RESTAURANT REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+      ],
+    },
+    {
+      email: "template-restaurant2@test.com",
+      templateReviews: [
+        {
+          rating: 2,
+          authorName: "RESTAURANT REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+        {
+          rating: 3,
+          authorName: "RESTAURANT REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+      ],
+    },
+    {
+      email: "template-restaurant3@test.com",
+      templateReviews: [
+        {
+          rating: 4,
+          authorName: "RESTAURANT REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+        {
+          rating: 4,
+          authorName: "RESTAURANT REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+      ],
+    },
+
+    // shopping
+    {
+      email: "template-shopping1@test.com",
+      templateReviews: [
+        {
+          rating: 5,
+          authorName: "SHOPPING REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+        {
+          rating: 5,
+          authorName: "SHOPPING REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+      ],
+    },
+    {
+      email: "template-shopping2@test.com",
+      templateReviews: [
+        {
+          rating: 3,
+          authorName: "SHOPPING REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+        {
+          rating: 3,
+          authorName: "SHOPPING REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+      ],
+    },
+    {
+      email: "template-shopping3@test.com",
+      templateReviews: [
+        {
+          rating: 4,
+          authorName: "SHOPPING REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+        {
+          rating: 5,
+          authorName: "SHOPPING REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+      ],
+    },
+
+    // travel
+    {
+      email: "template-travel1@test.com",
+      templateReviews: [
+        {
+          rating: 2,
+          authorName: "TRAVEL REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+        {
+          rating: 2,
+          authorName: "TRAVEL REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+      ],
+    },
+    {
+      email: "template-travel2@test.com",
+      templateReviews: [
+        {
+          rating: 4,
+          authorName: "TRAVEL REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+        {
+          rating: 3,
+          authorName: "TRAVEL REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+      ],
+    },
+    {
+      email: "template-travel3@test.com",
+      templateReviews: [
+        {
+          rating: 5,
+          authorName: "TRAVEL REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+        {
+          rating: 4,
+          authorName: "TRAVEL REVIEWER",
+          text: "TEMPLATE REVIEW",
+          date: "1/05/26",
+        },
+      ],
+    },
+  ];
+
+  reviews.forEach((item) => {
+    const key = "lbd_reviews_" + item.email;
+    localStorage.setItem(key, JSON.stringify(item.templateReviews));
+  });
 })();

@@ -1,0 +1,171 @@
+/* mobile overrides */
+
+@media (max-width: 800px) /* this might actually be too wide for normal phones */ {
+
+	/* site header (index.html) */
+	.site-header {
+		grid-template-columns: 1fr;
+		padding: 16px 20px;
+		gap: 12px;
+		text-align: center;
+	}
+
+	.site-header h1 {
+		font-size: 1.6rem;
+	}
+
+	.header-actions {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.header-action {
+		width: 64px;
+		height: 64px;
+		font-size: 0.7rem;
+	}
+
+	.search-bar {
+		min-width: unset;
+		width: 100%;
+	}
+
+	/* home page */
+	.discover-section {
+		padding: 20px 16px;
+	}
+
+	.category-grid-top,
+	.category-grid-bottom {
+		grid-template-columns: 1fr;
+	}
+
+	.category-card {
+		padding: 16px;
+	}
+
+	.service-card {
+		height: auto;
+		min-height: 120px;
+	}
+
+	.featured-row {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* listings page */
+	.listings-header {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 16px 20px;
+		gap: 10px;
+	}
+
+	.listings-header .search-bar {
+		width: 100%;
+	}
+
+	.listings-toolbar {
+		padding: 8px 16px;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.listings-grid {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0 16px 24px;
+		gap: 12px;
+	}
+
+	/* business detail page */
+	.business-header {
+		padding: 16px 20px;
+	}
+
+	.business-header .header-title {
+		font-size: 1.4rem;
+	}
+
+	.business-body {
+		grid-template-columns: 1fr;
+		padding: 16px 20px;
+		gap: 16px;
+	}
+
+	/* about page */
+	.about-header {
+		padding: 16px 20px;
+	}
+
+	.about-body {
+		grid-template-columns: 1fr;
+		padding: 16px 20px;
+		gap: 16px;
+	}
+
+	.about-image {
+		height: 200px;
+	}
+
+	.team-section {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+
+	.team-member {
+		margin-bottom: 0;
+	}
+
+	/* account page */
+	.account-header {
+		padding: 16px 20px;
+	}
+
+	.account-body {
+		padding: 16px 20px;
+		min-width: unset;
+		max-width: 100%;
+	}
+
+	/* blog page */
+	.blog-body {
+		padding: 16px 20px;
+		min-width: unset;
+		max-width: 100%;
+	}
+
+	/* feedback page */
+	.feedback-body {
+		padding: 16px 20px;
+		min-width: unset;
+		max-width: 100%;
+	}
+
+	/* shared toolbar */
+	.back-link {
+		padding: 10px 16px;
+	}
+
+	footer {
+		padding: 16px 20px;
+	}
+
+}
+
+/* very small phones (unlikely but whatever) */
+@media (max-width: 400px) {
+	.listings-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.featured-row {
+		grid-template-columns: 1fr;
+	}
+
+	.site-header h1 {
+		font-size: 1.3rem;
+	}
+}

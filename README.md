@@ -1,6 +1,6 @@
 # local-business-discovery
 
-> this codebase is extremely messy and all over the place and hard to maintain - webdev is not my passion nor is it fun; i hate it. so many comments required otherwise i would have no idea what im looking at because js is a STUPID language
+> this codebase is extremely messy and all over the place and hard to maintain - webdev is not my passion nor is it fun. so many comments required otherwise i would have no idea what im looking at because js is a silly language
 
 **TEMPLATES ARE THERE SO THAT YOU CAN SEE THAT THE PLATFORM FUNCTIONS - THEY ARE EASY FOR ME TO REMOVE AND ONLY SERVE TO BENEFIT YOU, THE MARKER OF ENTERPRISE COMPUTING.**
 
